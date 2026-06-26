@@ -1,0 +1,12 @@
+# Ignore trained model
+saved_summary_model/
+
+# Ignore training checkpoints
+results/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore Mac system files
+.DS_Store

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+        background-color: #FFD1DC;   /* light pink */
+        font-family: Arial, sans-serif;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .container{
+        background-color: #FFF4B5;   /* light yellow */
+        padding: 30px;
+        border-radius: 20px;
+        width: 600px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    h1{
+        color: #FF4F81;
+    }
+
+    h3{
+        color: #D97706;
+    }
+
+    p{
+        color: #444;
+    }
+
+    #textarea{
+        width: 90%;
+        height: 150px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid #FFB6C1;
+        resize: none;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    button{
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: #FF69B4;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover{
+        background-color: #FF1493;
+    }
+
+    .summary-output{
+        margin-top: 20px;
+        width: 600px;
+        background-color: #FFF4B5;
+        padding: 20px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    #summary-heading{
+        color: #FF4F81;
+    }
+
+    #content{
+        color: #333;
+    }
+</style>
+</head>
+<body>
+    <div class = "container">
+        <h1>Text Summarizer</h1>
+        <h3>using hugging face transformer (t5-small)</h3>
+        <p>write your content</p>
+        <form id = "form">
+            <textarea id = "textarea" placeholder="enter your content" required></textarea>
+            <button type = "submit">summarize</button>
+        </form>
+    </div>
+    <div class = "summary-output">
+        <h3 id = "summary-heading">Content Summary</h3>
+        <p id = "content"></p>
+    </div>
+</body>
+</html>
